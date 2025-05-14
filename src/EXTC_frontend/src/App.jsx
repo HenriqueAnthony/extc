@@ -3,6 +3,9 @@ import TokenCard from "./components/TokenCard";
 import { useState, useEffect } from 'react';
 import { EXTC_backend } from 'declarations/EXTC_backend';
 import TransferForm from "./components/TransferForm";  
+import TransferFormICRC2 from "./components/TransferFormICRC2";
+import TransferFormPlug from "./components/TransferFormPlug";
+
 
 
 
@@ -38,21 +41,24 @@ function App() {
   }
 
   return (
-    <main>
-        <div className="card" >
-            <TokenCard
-                name={name}
-                symbol={symbol}
-                fee={fee}
-                supply={supply}
-                minter={minter}
-            />
+  <main>
+    <div className="card">
+      <TokenCard
+        name={name}
+        symbol={symbol}
+        fee={fee}
+        supply={supply}
+        minter={minter}
+      />
 
-            <TransferForm />
+      <TransferForm />
+      <TransferFormICRC2 />
+      <TransferFormPlug />
 
-        </div>
-    </main>
-  );
+    </div>
+  </main>
+);
+
 }
 
 export default App;  
