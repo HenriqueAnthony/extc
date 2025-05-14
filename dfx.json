@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "EXTC_backend": {
+      "main": "src/EXTC_backend/main.mo",
+      "type": "motoko"
+    },
+    "EXTC_frontend": {
+      "dependencies": [
+        "EXTC_backend"
+      ],
+      "source": [
+        "src/EXTC_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "EXTC_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
