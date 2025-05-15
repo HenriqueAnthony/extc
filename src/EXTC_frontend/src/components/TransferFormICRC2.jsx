@@ -79,7 +79,7 @@ function TransferFormICRC2() {
           /* Redireciona para o provedor de identidade da ICP (Internet Identity).
              Neste caso a autenticação será realizada em ambiente Local.
           */
-          identityProvider: `http://${({}).CANISTER_ID_INTERNET_IDENTITY}.localhost:4943`,        
+          identityProvider: `http://${process.env.CANISTER_ID_INTERNET_IDENTITY}.localhost:4943`,        
           //identityProvider: "https://identity.ic0.app/#authorize", // Este código deverá ser utilizado apenas em caso de deploy em mainnet ou playgroud
 
           onSuccess: async () => {  
