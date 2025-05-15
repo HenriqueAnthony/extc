@@ -96,7 +96,7 @@ actor Extc {
   };
 
   public query func getCanisterPrincipal() : async Text {
-    return Principal.toText(Principal.fromActor(EXTCLEDGER));
+    return Principal.toText(Principal.fromActor(Extc));
   };
 
   public func getCanisterBalance() : async Nat {
