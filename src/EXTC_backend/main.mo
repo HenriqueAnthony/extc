@@ -100,7 +100,7 @@ actor Extc {
   };
 
   public func getCanisterBalance() : async Nat {
-    let owner = Principal.fromActor(EXTCLEDGER);
+    let owner = Principal.fromActor(Extc);
     let balance = await getBalance(owner);
     return balance;
   };
